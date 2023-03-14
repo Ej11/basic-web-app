@@ -11,10 +11,20 @@ export default function QueryProcessor(query: string): string {
       "Your name is EJ lmao xD."
     )
   }
-  if (query.toLowerCase().includes("which of the following numbers is the largest: 34, 66, 32?")) {
-    return (
-      "66"
-    )
-  }
+  // if (query.toLowerCase().includes("largest:")) {
+  //   const str = query;
+  //   const integers: number[] = [];
+  // const matches = str.match(/\d+/g);
+
+  // if (matches !== null) {
+  // for (const match of matches) {
+  //   integers.push(Number(match));
+  // }
+  // const final = toString(Math.max(integers));
+  // }
+  //   return (
+      
+  //   )
+  // }
   return "";
 }
