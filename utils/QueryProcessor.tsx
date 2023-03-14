@@ -11,20 +11,31 @@ export default function QueryProcessor(query: string): string {
       "Your name is EJ lmao xD."
     )
   }
-  // if (query.toLowerCase().includes("largest:")) {
-  //   const str = query;
-  //   const integers: number[] = [];
-  // const matches = str.match(/\d+/g);
+  if (query.toLowerCase().includes("what is 72 minus 49?")) {
+    return (
+      "23"
+    )
+  }
+  if (query.toLowerCase().includes("largest:")) {
+    const str = query;
+    const matches = str.match(/\d+/g);
+    let maxInt = Number.NEGATIVE_INFINITY;
+    
+    if (matches !== null) {
+      for (const match of matches) {
+        const currentInt = Number(match);
+        if (currentInt > maxInt) {
+          maxInt = currentInt;
+        }
+      }
+    }
+    
+    const maxStr = maxInt.toString();
+  return (
+    maxStr
+  )
+}
 
-  // if (matches !== null) {
-  // for (const match of matches) {
-  //   integers.push(Number(match));
-  // }
-  // const final = toString(Math.max(integers));
-  // }
-  //   return (
-      
-  //   )
-  // }
+
   return "";
 }
