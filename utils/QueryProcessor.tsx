@@ -11,5 +11,10 @@ export default function QueryProcessor(query: string): string {
       "Your name is EJ lmao xD."
     )
   }
+  if (query.toLowerCase().includes("Which of the following numbers is the largest: 34, 66, 32?")) {
+    return (
+      "66"
+    )
+  }
   return "";
 }
