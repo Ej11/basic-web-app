@@ -35,6 +35,23 @@ export default function QueryProcessor(query: string): string {
     maxStr
   )
 }
+if (query.toLowerCase().includes("plus")) {
+  const str = query;
+  const matches = str.match(/\d+/g);
+  let sum = 0;
+
+if (matches !== null) {
+  for (const match of matches) {
+    const currentInt = Number(match);
+    sum += currentInt;
+  }
+}
+
+const sumStr = sum.toString();
+return (
+  sumStr
+)
+}
 
 
   return "";
